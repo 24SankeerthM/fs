@@ -1,0 +1,57 @@
+Create Local Repository
+mkdir git-practical
+cd git-practical
+git init
+🔹 2. Create File & Commit
+echo Hello World > file.txt
+git add .
+git commit -m "Initial commit"
+🔹 3. Add Remote Repository (GitHub)
+
+👉 Replace with your repo link
+
+git remote add origin https://github.com/your-username/git-practical.git
+git branch -M main
+git push -u origin main
+🔹 4. Clone Repository
+git clone https://github.com/your-username/git-practical.git
+🔹 5. Fetch Updates
+git fetch origin
+🔹 6. Pull Updates
+git pull origin main
+🔹 7. Create & Checkout Branch
+git checkout -b feature-branch
+
+Switch branch:
+
+git checkout main
+🔹 8. Reset Changes
+
+Soft reset:
+
+git reset --soft HEAD~1
+
+Hard reset:
+
+git reset --hard HEAD~1
+🔹 9. Delete Branch
+
+Delete local branch:
+
+git branch -d feature-branch
+
+Delete remote branch:
+
+git push origin --delete feature-branch
+🔹 10. Check Status
+git status
+git log
+🎯 FINAL QUICK FLOW (if examiner asks demo)
+git init
+echo test > a.txt
+git add .
+git commit -m "test"
+git checkout -b newbranch
+git checkout main
+git merge newbranch
+git branch -d newbranch
