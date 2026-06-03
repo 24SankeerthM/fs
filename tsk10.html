@@ -1,0 +1,21 @@
+Step 1: Open Powershell or cmd
+
+kubectl create deployment nginx-app --image=nginx
+
+kubectl get pods
+
+kubectl expose deployment nginx-app --type=NodePort --port=80
+
+kubectl get services nginx-app
+
+kubectl delete deployment nginx-app
+
+kubectl delete service nginx-app
+
+If localhost is not working:
+
+kubectl port-forward deployment/nginx-app 8080:80
+
+Open Browser:
+
+http://localhost:8080
